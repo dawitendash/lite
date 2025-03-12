@@ -1,5 +1,5 @@
-import 'package:fblite/Components/Profile/profile.dart';
 import 'package:fblite/Controllers/Navigation.dart';
+import 'package:fblite/Views/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

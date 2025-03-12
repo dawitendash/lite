@@ -1,7 +1,7 @@
 import 'package:fblite/Components/Profile/ButtonTocreateStory.dart';
 import 'package:fblite/Components/Profile/profile_body.dart';
 import 'package:fblite/Components/Profile/upgrade_profile.dart';
-import 'package:fblite/Components/Profile/user_posts.dart';
+import 'package:fblite/Components/Profile/user_posts/user_posts.dart';
 import 'package:fblite/Components/Search/Search.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/BorderLine.dart';

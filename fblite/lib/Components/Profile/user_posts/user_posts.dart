@@ -1,9 +1,10 @@
 import 'package:fblite/Components/Home/Body/MainBody/PosterProfile.dart';
 import 'package:fblite/Components/Home/Body/MainBody/postReaction.dart';
 import 'package:fblite/Components/Home/Body/TopSeachBar.dart';
-import 'package:fblite/Components/Menus/FullExpandSpace.dart';
+import 'package:fblite/Components/Profile/user_posts/horizontal_links.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
+import 'package:fblite/Controllers/NormalText.dart';
 import 'package:flutter/material.dart';
 
 class UserPosts extends StatelessWidget {
@@ -23,37 +24,7 @@ class UserPosts extends StatelessWidget {
             iconColor: Colors.black,
           ),
           SizedBox(height: 10),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-            children: [
-              SizedBox(
-                width: 120,
-                child: Fullexpandspaces(
-                  textValue: "Photo",
-                  icons: Icons.photo_library_sharp,
-                  colors: Colors.green,
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Fullexpandspaces(
-                  textValue: "Check in",
-                  icons: Icons.location_on,
-                  colors: Colors.red,
-                ),
-              ),
-              SizedBox(
-                width: 120,
-                child: Fullexpandspaces(
-                  textValue: "Life Event",
-                  icons: Icons.flag,
-                  colors: const Color.fromARGB(255, 76, 102, 175),
-                ),
-              ),
-            ],
-          ),
+          HorizontalLinks(),
           SizedBox(height: 10),
           BottomBorderline(height: 5.0),
           SizedBox(height: 10),
@@ -62,16 +33,27 @@ class UserPosts extends StatelessWidget {
           BottomBorderline(),
           SizedBox(height: 5),
           Center(
-            child: Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-              ),
-              child: Text('🧸', style: TextStyle(color: Colors.white)),
+            child: Column(
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(
+                    '🧸',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Boldtext(text: "Born on March 2003", textSize: 12),
+                NormalText("March 2003"),
+              ],
             ),
           ),
+          SizedBox(height: 5),
           SizedBox(height: 5),
           BottomBorderline(),
           Postreaction(),

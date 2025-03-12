@@ -1,6 +1,7 @@
-import 'package:fblite/Components/Profile/profile.dart';
+import 'package:fblite/Components/CreateStory/create_story.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:fblite/Controllers/Navigation.dart';
+import 'package:fblite/Views/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -45,13 +46,25 @@ class _topSearchBarState extends State<Topseachbar> {
             Expanded(
               child: SizedBox(
                 height: 40,
-                child: SearchBar(
-                  elevation: WidgetStateProperty.all(0.0),
-                  hintText: widget.hintValue,
-                  backgroundColor: WidgetStateProperty.all(Color(0xFFE4E6E8)),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigateto(context, CreateStory());
+                  },
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.only(left: 10, right: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE4E6E8),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+
+                    child: Text(widget.hintValue!),
+                  ),
                 ),
               ),
             ),
+
             FaIcon(FontAwesomeIcons.images, color: widget.iconColor),
           ],
         ),

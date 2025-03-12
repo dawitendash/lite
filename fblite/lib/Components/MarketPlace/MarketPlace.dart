@@ -1,8 +1,9 @@
 import 'package:fblite/Components/Header/HeaderRows/SecondRow.dart';
+import 'package:fblite/Components/MarketPlace/maket_products.dart';
+import 'package:fblite/Components/MarketPlace/marketplace_links.dart';
 import 'package:fblite/Components/Search/Search.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
-import 'package:fblite/Controllers/BuilLinksCotainer.dart';
 import 'package:flutter/material.dart';
 
 class MarketPlace extends StatefulWidget {
@@ -12,6 +13,12 @@ class MarketPlace extends StatefulWidget {
 }
 
 class _MarketPlaceState extends State<MarketPlace> {
+  List images = [
+    "assets/images/test.jpg",
+    "assets/images/test.jpg",
+    "assets/images/test.jpg",
+    "assets/images/test.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +36,11 @@ class _MarketPlaceState extends State<MarketPlace> {
               children: [Boldtext(text: 'Marketplace'), Search()],
             ),
             SizedBox(height: 10),
-            Row(
-              children: [
-                Buillinkscotainer(icons: Icons.person),
-                SizedBox(width: 3),
-                Buillinkscotainer(textValue: "Inbox"),
-                SizedBox(width: 3),
-                Buillinkscotainer(textValue: "Sells"),
-                SizedBox(width: 3),
-                Buillinkscotainer(textValue: "Catagories"),
-                SizedBox(width: 3),
-                Buillinkscotainer(textValue: "Search"),
-              ],
-            ),
+            MarketplaceLinks(),
+            SizedBox(height: 10),
+            BottomBorderline(),
+            SizedBox(height: 10),
+            MarketProducts(),
           ],
         ),
       ),
