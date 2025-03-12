@@ -1,4 +1,3 @@
-import 'package:fblite/Controllers/NormalText.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -22,7 +21,9 @@ class Fullexpandspaces extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [NormalText(textValue)],
+              children: [
+                Text(textValue!, style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
             ),
           ),
         ],

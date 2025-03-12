@@ -1,6 +1,10 @@
+import 'package:fblite/Components/Profile/ButtonTocreateStory.dart';
+import 'package:fblite/Components/Profile/profile_body.dart';
+import 'package:fblite/Components/Profile/upgrade_profile.dart';
+import 'package:fblite/Components/Profile/user_posts.dart';
 import 'package:fblite/Components/Search/Search.dart';
 import 'package:fblite/Controllers/BoldText.dart';
-import 'package:fblite/Controllers/Button.dart';
+import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:fblite/Controllers/_buildIconButton.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -69,22 +73,20 @@ class _ProfileState extends State<Profile> {
                 Positioned(
                   bottom: 1,
                   left: 2,
-                  child: Boldtext("Dawit Endashaw"),
+                  child: Boldtext(text: "Dawit Endashaw"),
                 ),
               ],
             ),
             // SizedBox(height: 10,),
-            Row(
-              children: [
-                Expanded(
-                  child: Button(textValue: "Add to story", method: () {}),
-                ),
-                Expanded(
-                  child: Button(textValue: "Add to story", method: () {}),
-                ),
-                Expanded(child: Button(textValue: "", method: () {})),
-              ],
-            ),
+            Buttontocreatestory(),
+            SizedBox(height: 5),
+            BottomBorderline(),
+            SizedBox(height: 5),
+            UpgradeProfile(),
+            SizedBox(height: 5),
+            ProfileBody(),
+            SizedBox(height: 5),
+            UserPosts(),
           ],
         ),
       ),

@@ -20,7 +20,7 @@ class Menus_screen extends StatelessWidget {
         elevation: 0.5,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Boldtext('Menu'), Search()],
+          children: [Boldtext(text: 'Menu'), Search()],
         ),
       ),
       body: SingleChildScrollView(

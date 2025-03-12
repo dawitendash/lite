@@ -29,7 +29,10 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(height: 10),
-            Topseachbar(),
+            Topseachbar(
+              hintValue: "What's on your mind?",
+              iconColor: Colors.green,
+            ),
             SizedBox(height: 10),
             Createstoryandfriends(),
             post(),

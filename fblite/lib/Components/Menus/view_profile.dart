@@ -19,7 +19,7 @@ class ViewProfile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Boldtext("Dawit Endashaw"),
+                Boldtext(text: "Dawit Endashaw"),
                 SizedBox(height: 4),
                 NormalText("View profile"),
               ],

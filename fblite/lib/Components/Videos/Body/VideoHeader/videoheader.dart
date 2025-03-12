@@ -13,7 +13,7 @@ class _videoState extends State<Videoheader> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Boldtext('Videos'),
+        Boldtext(text: 'Videos'),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

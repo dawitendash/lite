@@ -20,7 +20,7 @@ class _useDifferentAccountState extends State<UseDifferentAccount> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Find another account?"),
+            Boldtext(text: "Find another account?"),
             SizedBox(height: 10),
             NormalText(
               "If you have an account we can help you find it and log in.if you don't ,you can create a new account.",

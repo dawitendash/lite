@@ -26,7 +26,7 @@ class _MarketPlaceState extends State<MarketPlace> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Boldtext('Marketplace'), Search()],
+              children: [Boldtext(text: 'Marketplace'), Search()],
             ),
             SizedBox(height: 10),
             Row(

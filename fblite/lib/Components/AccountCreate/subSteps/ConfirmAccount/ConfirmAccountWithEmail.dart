@@ -17,7 +17,7 @@ class _confirmTheAccountState extends State<ConfirmAccountWithEmail> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Confirm your account"),
+            Boldtext(text: "Confirm your account"),
             NormalText(
               "We sent a code to your email. Enter that code to confirm your account.",
             ),

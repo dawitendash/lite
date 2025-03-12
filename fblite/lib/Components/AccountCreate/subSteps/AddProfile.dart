@@ -34,7 +34,7 @@ class _addProfileState extends State<Addprofile> {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            Boldtext("Add a profile picture"),
+            Boldtext(text: "Add a profile picture"),
             NormalText(
               "Help people find and recognize you by adding a profile picture ",
             ),

@@ -23,7 +23,7 @@ class _GetAgeState extends State<GetAge> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Boldtext(
-                'How old are you?',
+                text: 'How old are you?',
               ), //reusable text because they are the same style bro
               SizedBox(height: 10),
               TextField(

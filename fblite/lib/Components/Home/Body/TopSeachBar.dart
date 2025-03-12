@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Topseachbar extends StatefulWidget {
+  String? hintValue;
+  Color? iconColor;
+  Topseachbar({Key? key, this.hintValue, this.iconColor}) : super(key: key);
   _topSearchBarState createState() => _topSearchBarState();
 }
 
@@ -44,12 +47,12 @@ class _topSearchBarState extends State<Topseachbar> {
                 height: 40,
                 child: SearchBar(
                   elevation: WidgetStateProperty.all(0.0),
-                  hintText: "What's on your mind?",
+                  hintText: widget.hintValue,
                   backgroundColor: WidgetStateProperty.all(Color(0xFFE4E6E8)),
                 ),
               ),
             ),
-            FaIcon(FontAwesomeIcons.images, color: Colors.green),
+            FaIcon(FontAwesomeIcons.images, color: widget.iconColor),
           ],
         ),
         SizedBox(height: 10),

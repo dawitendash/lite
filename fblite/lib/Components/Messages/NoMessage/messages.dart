@@ -26,7 +26,7 @@ class _messages extends State<Messages> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Boldtext('Messages'),
+                Boldtext(text: 'Messages'),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.min,

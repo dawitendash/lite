@@ -21,7 +21,9 @@ class _accountExitState extends State<AccountExist> {
           children: [
             Padding(
               padding: EdgeInsets.only(right: 10),
-              child: Boldtext('You might already have a Facebook account'),
+              child: Boldtext(
+                text: 'You might already have a Facebook account',
+              ),
             ),
             SizedBox(height: 10),
             NormalText(

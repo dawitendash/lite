@@ -1,7 +1,23 @@
+import 'package:fblite/Components/Profile/profile.dart';
+import 'package:fblite/Controllers/Navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Posterprofile extends StatefulWidget {
+  String? follow = '';
+  IconData? verifyicon;
+  IconData? glopeicon;
+  IconData? closeicon;
+  String? sugesstedtext = '';
+
+  Posterprofile({
+    Key? key,
+    this.closeicon,
+    this.follow,
+    this.glopeicon,
+    this.verifyicon,
+    this.sugesstedtext,
+  }) : super(key: key);
   _posterProfileState createState() => _posterProfileState();
 }
 
@@ -13,10 +29,28 @@ class _posterProfileState extends State<Posterprofile> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: Color(0xFFE4E6E8),
-              child: Icon(Icons.person),
+            GestureDetector(
+              onTap: () {
+                Navigateto(context, Profile());
+              },
+              child: Stack(
+                alignment: Alignment.bottomRight,
+                children: [
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Color(0xFFE4E6E8),
+                    child: Icon(Icons.person),
+                  ),
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(width: 5),
             Column(
@@ -29,16 +63,16 @@ class _posterProfileState extends State<Posterprofile> {
                       'Dawit Endashaw',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    Icon(Icons.verified, color: Colors.blue),
+                    Icon(widget.verifyicon, color: Colors.blue),
                     SizedBox(width: 5),
-                    Text("follow", style: TextStyle(color: Colors.blue)),
+                    Text(widget.follow!, style: TextStyle(color: Colors.blue)),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "Suggested for you .",
+                      widget.sugesstedtext!,
                       style: TextStyle(
                         color: Color.fromARGB(255, 142, 143, 144),
                         fontSize: 12,
@@ -52,7 +86,7 @@ class _posterProfileState extends State<Posterprofile> {
                       ),
                     ),
                     FaIcon(
-                      FontAwesomeIcons.globe,
+                      widget.glopeicon,
                       color: Color.fromARGB(255, 142, 143, 144),
                     ),
                   ],
@@ -66,7 +100,7 @@ class _posterProfileState extends State<Posterprofile> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.more_horiz, color: Color.fromARGB(255, 142, 143, 144)),
-            Icon(Icons.close, color: Color.fromARGB(255, 142, 143, 144)),
+            Icon(widget.closeicon, color: Color.fromARGB(255, 142, 143, 144)),
           ],
         ),
       ],

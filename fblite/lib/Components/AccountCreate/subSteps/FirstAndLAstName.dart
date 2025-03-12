@@ -22,7 +22,7 @@ class _FirsAndLastName extends State<FirstAndLAstName> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("what's your name?"),
+            Boldtext(text: "what's your name?"),
             SizedBox(height: 20),
             NormalText('Enter the name you use in real life'),
             SizedBox(height: 20),

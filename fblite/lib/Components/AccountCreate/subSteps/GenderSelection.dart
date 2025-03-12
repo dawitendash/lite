@@ -24,7 +24,7 @@ class _GenderSelectionState extends State<GenderSelection> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext('What is your gender?'),
+            Boldtext(text: 'What is your gender?'),
             SizedBox(height: 10),
             NormalText(
               'You can change who sees your gender on your profile later.',

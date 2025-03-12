@@ -30,7 +30,7 @@ class _SelectYourNameState extends State<SelectYourName> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Select your name"),
+            Boldtext(text: "Select your name"),
             SizedBox(height: 20),
             NormalText(
               'You typed first last name .We require everyone to use the name they use in evertday life ,what thier friends call them, on facebook,Did you mean:',

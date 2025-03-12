@@ -20,7 +20,7 @@ class _createAccountState extends State<CreateAccount> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext('Join to Facebook'),
+            Boldtext(text: 'Join to Facebook'),
             SizedBox(height: 20),
             ClipRRect(
               borderRadius: BorderRadius.circular(10),

@@ -19,7 +19,7 @@ class _AgreeWithFacebookState extends State<AgreeWithFacebook> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Agree to Facebook's terms and policies"),
+            Boldtext(text: "Agree to Facebook's terms and policies"),
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(right: 5),

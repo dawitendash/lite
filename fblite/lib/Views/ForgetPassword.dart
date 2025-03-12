@@ -21,7 +21,7 @@ class _ForgetpasswordState extends State<Forgetpassword> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext('Find your account'),
+            Boldtext(text: 'Find your account'),
             SizedBox(height: 10),
             NormalText(
               _IsFindByEamil

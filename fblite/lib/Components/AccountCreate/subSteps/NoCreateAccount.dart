@@ -25,7 +25,7 @@ class _NoCreateAccountState extends State<NoCreateAccount> {
               "Let us know this email address belongs to you. Enter the code sent to dawitEndashaw74@gmail.com.",
             ),
             const SizedBox(height: 10),
-            Boldtext("Enter the 5-digit code from your email."),
+            Boldtext(text: "Enter the 5-digit code from your email."),
             const SizedBox(height: 10),
 
             // Centered TextField with medium width

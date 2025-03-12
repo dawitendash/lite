@@ -22,7 +22,7 @@ class _BirthdayState extends State<BirthDay> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("what's your birthday?"),
+            Boldtext(text: "what's your birthday?"),
             SizedBox(height: 20),
             NormalText(
               'Choose your date of birth, you can always make this private later.',

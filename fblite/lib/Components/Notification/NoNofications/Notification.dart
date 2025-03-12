@@ -28,7 +28,7 @@ class _notificationState extends State<Notifications> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Boldtext("Notifications"),
+                Boldtext(text: "Notifications"),
                 Row(
                   children: [
                     BuildIconButton(icon: Icons.check),

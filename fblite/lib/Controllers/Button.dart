@@ -5,12 +5,14 @@ class Button extends StatefulWidget {
   final VoidCallback? method;
   final foregroundColor;
   final backgroundColor;
+  final IconData? icon;
   Button({
     Key? key,
     required this.textValue,
     required this.method,
     this.foregroundColor,
     this.backgroundColor,
+    this.icon,
   }) : super(key: key);
   _ButtonState createState() => _ButtonState();
 }
@@ -26,9 +28,20 @@ class _ButtonState extends State<Button> {
         backgroundColor: widget.backgroundColor,
         foregroundColor: widget.foregroundColor,
         minimumSize: const Size(double.infinity, 50),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
-      child: Text(widget.textValue!),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Icon(widget.icon, color: widget.foregroundColor, size: 16),
+          SizedBox(width: 3),
+          Text(
+            widget.textValue!,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 }

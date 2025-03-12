@@ -24,7 +24,7 @@ class _CreatePasswordState extends State<CreatePassword> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext('Create a password'),
+            Boldtext(text: 'Create a password'),
             SizedBox(height: 10),
             NormalText(
               "Create a password with at least 6 characters or numbers. It should be something others can't guess",

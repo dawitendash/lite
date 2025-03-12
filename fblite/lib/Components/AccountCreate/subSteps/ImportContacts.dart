@@ -25,7 +25,7 @@ class _ImportContactState extends State<ImportContacts> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Facebook is better with friends"),
+            Boldtext(text: "Facebook is better with friends"),
             NormalText(
               "See who's on Facebook by continuously uploading your contacts. Then let us know who you want to add as friends.",
             ),

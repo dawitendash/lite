@@ -27,7 +27,7 @@ class _FriendsState extends State<Friends> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Boldtext('Friends'), Search()],
+              children: [Boldtext(text: 'Friends'), Search()],
             ),
             SizedBox(height: 10),
             Row(

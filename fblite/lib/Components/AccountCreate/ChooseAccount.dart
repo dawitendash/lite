@@ -17,7 +17,7 @@ class _chooseAccountState extends State<ChooseAccount> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext('Choose your account'),
+            Boldtext(text: 'Choose your account'),
             SizedBox(height: 20),
             GestureDetector(
               onTap: () {

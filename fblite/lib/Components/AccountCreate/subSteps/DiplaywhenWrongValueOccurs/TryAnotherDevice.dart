@@ -19,7 +19,7 @@ class _TryAnotherDeviceState extends State<TryAnotherDevice> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Boldtext("Try another device to continue"),
+            Boldtext(text: "Try another device to continue"),
             const SizedBox(height: 10),
             NormalText(
               "This must be a device you've used to log into this account before",
@@ -35,7 +35,7 @@ class _TryAnotherDeviceState extends State<TryAnotherDevice> {
               ),
             ),
             SizedBox(height: 10),
-            Boldtext('Why?'),
+            Boldtext(text: 'Why?'),
             SizedBox(height: 10),
             NormalText(
               "We can't match the device you're using to the account you're trying to recover,so it's not safe to go further.",

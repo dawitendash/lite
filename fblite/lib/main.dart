@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
       home: Home(),
-
       //  Scaffold(
       //   backgroundColor: Colors.white,
       //   appBar: AppBar(
