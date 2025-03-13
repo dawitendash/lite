@@ -1,4 +1,5 @@
 import 'package:fblite/Components/AccountCreate/ChooseAccount.dart';
+import 'package:fblite/Components/app_bar/app_bar.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/Button.dart';
 import 'package:fblite/Controllers/NormalText.dart';
@@ -15,7 +16,7 @@ class _ForgetpasswordState extends State<Forgetpassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("")),
+      appBar: AppBar(title: CustomAppBar(app_bar_text: "")),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(

@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Buillinkscotainer extends StatefulWidget {
+  double? textSize;
   String? textValue;
   IconData? icons;
   VoidCallback? method;
 
-  Buillinkscotainer({this.icons, this.textValue, this.method, Key? key})
-    : super(key: key);
+  Buillinkscotainer({
+    this.icons,
+    this.textValue,
+    this.method,
+    this.textSize,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<Buillinkscotainer> createState() => _BuillinkscotainerState();
@@ -33,6 +39,7 @@ class _BuillinkscotainerState extends State<Buillinkscotainer> {
               Text(
                 widget.textValue!,
                 style: TextStyle(
+                  fontSize: widget.textSize,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),

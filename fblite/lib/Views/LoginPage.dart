@@ -1,3 +1,4 @@
+import 'package:fblite/Components/app_bar/app_bar.dart';
 import 'package:fblite/Controllers/Button.dart';
 import 'package:fblite/Views/CreateAccount.dart';
 import 'package:fblite/Views/ForgetPassword.dart';
@@ -9,7 +10,7 @@ class Loginpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('')),
+      appBar: AppBar(title: CustomAppBar(app_bar_text: "")),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(

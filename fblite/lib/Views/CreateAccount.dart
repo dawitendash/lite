@@ -1,4 +1,5 @@
 import 'package:fblite/Components/AccountCreate/subSteps/FirstAndLAstName.dart';
+import 'package:fblite/Components/app_bar/app_bar.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/Button.dart';
 import 'package:fblite/Views/ForgetPassword.dart';
@@ -14,7 +15,7 @@ class _createAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('')),
+      appBar: AppBar(title: CustomAppBar(app_bar_text: "")),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(

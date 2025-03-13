@@ -20,7 +20,6 @@ class _HomeState extends State<Home> {
         toolbarHeight: 125,
         automaticallyImplyLeading: false,
         title: HeaderBar(),
-
         bottom: BottomBorderline(),
       ),
       body: SingleChildScrollView(

@@ -3,6 +3,7 @@ import 'package:fblite/Components/Profile/profile_body.dart';
 import 'package:fblite/Components/Profile/upgrade_profile.dart';
 import 'package:fblite/Components/Profile/user_posts/user_posts.dart';
 import 'package:fblite/Components/Search/Search.dart';
+import 'package:fblite/Components/app_bar/app_bar.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:fblite/Controllers/_buildIconButton.dart';
@@ -21,12 +22,12 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Dawit Endashaw ", style: TextStyle(fontSize: 20)),
-            Search(),
-          ],
+        title: CustomAppBar(
+          app_bar_text: "Dawit Endashaw",
+          app_bar_text_size: 18,
+          method: Search(),
+          endIconText: "",
+          endIconTextMethod: () {},
         ),
       ),
       body: SingleChildScrollView(

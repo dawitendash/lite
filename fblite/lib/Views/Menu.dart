@@ -3,7 +3,7 @@ import 'package:fblite/Components/Menus/Bottom_things.dart';
 import 'package:fblite/Components/Menus/FullExpandSpace.dart';
 import 'package:fblite/Components/Menus/view_profile.dart';
 import 'package:fblite/Components/Search/Search.dart';
-import 'package:fblite/Controllers/BoldText.dart';
+import 'package:fblite/Components/app_bar/app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -13,14 +13,15 @@ class Menus_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Colors.grey[200], // Light grey background like Facebook Lite
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        backgroundColor: Colors.white, // White app bar like Facebook Lite
+        backgroundColor: Colors.white,
         elevation: 0.5,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Boldtext(text: 'Menu'), Search()],
+        title: CustomAppBar(
+          app_bar_text: "Menu",
+          method: Search(),
+          endIconText: "",
+          endIconTextMethod: () {},
         ),
       ),
       body: SingleChildScrollView(

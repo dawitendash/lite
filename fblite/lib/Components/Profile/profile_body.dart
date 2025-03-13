@@ -1,3 +1,4 @@
+import 'package:fblite/Components/Bottom_Modal/custom_modal.dart';
 import 'package:fblite/Components/Menus/FullExpandSpace.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,9 @@ class ProfileBody extends StatelessWidget {
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            method: () {
+              CustomModal(context);
+            },
             textValue: "School",
             icons: Icons.school,
             bg: Colors.white,
