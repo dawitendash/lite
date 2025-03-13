@@ -1,10 +1,10 @@
 import 'package:fblite/Components/Friends/Friends.dart';
-import 'package:fblite/Components/MarketPlace/MarketPlace.dart';
 import 'package:fblite/Components/Messages/NoMessage/messages.dart';
 import 'package:fblite/Components/Notification/NoNofications/Notification.dart';
 import 'package:fblite/Controllers/BuildContainerForNotifivation.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Views/Home.dart';
+import 'package:fblite/Views/MarketPlace.dart';
 import 'package:fblite/Views/Video.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -60,7 +60,7 @@ class _secondRowState extends State<SecondRow> {
                 FontAwesomeIcons.bell,
                 color: Color.fromARGB(255, 144, 142, 142),
               ),
-              Buildcontainerfornotifivation(textValue: '99+'),
+              // Buildcontainerfornotifivation(textValue: '99+'),
             ],
           ),
         ),

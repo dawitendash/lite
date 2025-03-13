@@ -26,6 +26,7 @@ class _BuillinkscotainerState extends State<Buillinkscotainer> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             if (widget.icons != null) ...[Icon(widget.icons)],
             if (widget.textValue != null)

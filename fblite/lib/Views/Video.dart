@@ -23,7 +23,7 @@ class _videoState extends State<Video> {
         bottom: BottomBorderline(),
       ),
       body: SingleChildScrollView(
-        // padding: EdgeInsets.all(),
+        padding: EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -14,15 +14,11 @@ class Inbox extends StatelessWidget {
           children: [
             Row(
               children: [
-                Expanded(child: Buillinkscotainer(textValue: "All")),
-                Expanded(
-                  child: Buillinkscotainer(textValue: "Pending payment"),
-                ),
-                Expanded(child: Buillinkscotainer(textValue: "To be shipped")),
-                Expanded(child: Buillinkscotainer(textValue: "Shipped")),
-                Expanded(
-                  child: Buillinkscotainer(textValue: "Cash on delivery"),
-                ),
+                Buillinkscotainer(textValue: "All"),
+                Buillinkscotainer(textValue: "Pending payment"),
+                Buillinkscotainer(textValue: "To be shipped"),
+                Buillinkscotainer(textValue: "Shipped"),
+                Buillinkscotainer(textValue: "Cash on delivery"),
               ],
             ),
             SizedBox(height: 20),

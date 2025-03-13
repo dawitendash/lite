@@ -13,12 +13,6 @@ class MarketPlace extends StatefulWidget {
 }
 
 class _MarketPlaceState extends State<MarketPlace> {
-  List images = [
-    "assets/images/test.jpg",
-    "assets/images/test.jpg",
-    "assets/images/test.jpg",
-    "assets/images/test.jpg",
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
