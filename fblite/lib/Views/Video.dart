@@ -1,9 +1,9 @@
 import 'package:fblite/Components/Header/HeaderRows/SecondRow.dart';
-import 'package:fblite/Components/Home/Body/MainBody/PostedContent.dart';
-import 'package:fblite/Components/Home/Body/MainBody/PosterProfile.dart';
-import 'package:fblite/Components/Home/Body/MainBody/Posttitle.dart';
-import 'package:fblite/Components/Home/Body/MainBody/SampleReactionData.dart';
-import 'package:fblite/Components/Home/Body/MainBody/postReaction.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/PostedContent.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/PosterProfile.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/Posttitle.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/SampleReactionData.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/postReaction.dart';
 import 'package:fblite/Components/Videos/Body/VideoHeader/videoheader.dart';
 import 'package:fblite/Components/Videos/Body/VidowLinks/Links.dart';
 import 'package:fblite/Controllers/BorderLine.dart';

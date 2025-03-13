@@ -1,8 +1,8 @@
-import 'package:fblite/Components/Home/Body/MainBody/PostedContent.dart';
-import 'package:fblite/Components/Home/Body/MainBody/PosterProfile.dart';
-import 'package:fblite/Components/Home/Body/MainBody/Posttitle.dart';
-import 'package:fblite/Components/Home/Body/MainBody/SampleReactionData.dart';
-import 'package:fblite/Components/Home/Body/MainBody/postReaction.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/PostedContent.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/PosterProfile.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/Posttitle.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/SampleReactionData.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/postReaction.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

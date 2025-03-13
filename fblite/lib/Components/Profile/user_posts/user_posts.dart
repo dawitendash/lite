@@ -1,5 +1,5 @@
-import 'package:fblite/Components/Home/Body/MainBody/PosterProfile.dart';
-import 'package:fblite/Components/Home/Body/MainBody/postReaction.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/PosterProfile.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/postReaction.dart';
 import 'package:fblite/Components/Home/Body/TopSeachBar.dart';
 import 'package:fblite/Components/Profile/user_posts/horizontal_links.dart';
 import 'package:fblite/Controllers/BoldText.dart';

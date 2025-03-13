@@ -1,6 +1,6 @@
 import 'package:fblite/Components/Header/HeaderBar.dart';
 import 'package:fblite/Components/Home/Body/HorizontalScrollable/CreateStoryAndFriends.dart';
-import 'package:fblite/Components/Home/Body/MainBody/post.dart';
+import 'package:fblite/Components/Home/Body/MainBody/post/post.dart';
 import 'package:fblite/Components/Home/Body/TopSeachBar.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:flutter/material.dart';

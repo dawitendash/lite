@@ -1,7 +1,6 @@
 import 'package:fblite/Components/Friends/Friends.dart';
 import 'package:fblite/Components/Messages/NoMessage/messages.dart';
 import 'package:fblite/Components/Notification/NoNofications/Notification.dart';
-import 'package:fblite/Controllers/BuildContainerForNotifivation.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Views/Home.dart';
 import 'package:fblite/Views/MarketPlace.dart';
@@ -14,81 +13,47 @@ class SecondRow extends StatefulWidget {
 }
 
 class _secondRowState extends State<SecondRow> {
+  int _currentIndex = 0;
+  List<Map<String, dynamic>> navItems = [
+    {"icon": FontAwesomeIcons.house, "page": Home(), "color": Colors.blue},
+    {
+      "icon": FontAwesomeIcons.userGroup,
+      "page": Friends(),
+      "color": Colors.grey,
+    },
+    {
+      "icon": FontAwesomeIcons.facebookMessenger,
+      "page": Messages(),
+      "color": Colors.grey,
+    },
+    {
+      "icon": FontAwesomeIcons.bell,
+      "page": Notifications(),
+      "color": Colors.grey,
+    },
+    {"icon": FontAwesomeIcons.tv, "page": Video(), "color": Colors.grey},
+    {
+      "icon": FontAwesomeIcons.store,
+      "page": MarketPlace(),
+      "color": Colors.grey,
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, Home());
+      children: List.generate(navItems.length, (index) {
+        return IconButton(
+          onPressed: () {
+            setState(() {
+              navItems.first["color"] = Colors.grey;
+              navItems[index]["color"] = Colors.blue;
+            });
+            Navigateto(context, navItems[index]["page"]);
           },
-          child: Stack(
-            alignment: Alignment.topRight,
-            children: [
-              FaIcon(FontAwesomeIcons.house, color: Colors.blue),
-              Buildcontainerfornotifivation(textValue: "15+"),
-            ],
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, Friends());
-          },
-          child: FaIcon(
-            FontAwesomeIcons.userGroup,
-            color: Color.fromARGB(255, 144, 142, 142),
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, Messages());
-          },
-          child: FaIcon(
-            FontAwesomeIcons.facebookMessenger,
-            color: Color.fromARGB(255, 144, 142, 142),
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, Notifications());
-          },
-          child: Stack(
-            alignment: Alignment.topRight,
-            children: [
-              FaIcon(
-                FontAwesomeIcons.bell,
-                color: Color.fromARGB(255, 144, 142, 142),
-              ),
-              // Buildcontainerfornotifivation(textValue: '99+'),
-            ],
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, Video());
-          },
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              FaIcon(
-                FontAwesomeIcons.tv,
-                color: Color.fromARGB(255, 144, 142, 142),
-              ),
-              FaIcon(FontAwesomeIcons.play, size: 8),
-            ],
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigateto(context, MarketPlace());
-          },
-          child: FaIcon(
-            FontAwesomeIcons.store,
-            color: Color.fromARGB(255, 144, 142, 142),
-          ),
-        ),
-      ],
+          icon: Icon(navItems[index]["icon"], color: navItems[index]["color"]),
+        );
+      }),
     );
   }
 }

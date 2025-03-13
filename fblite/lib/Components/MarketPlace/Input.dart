@@ -10,6 +10,9 @@ class Input extends StatelessWidget {
     return Container(
       height: 30,
       child: TextField(
+        onChanged: (value) {
+          print(value);
+        },
         decoration: InputDecoration(
           filled: true,
           fillColor: Color.fromARGB(255, 230, 234, 239),

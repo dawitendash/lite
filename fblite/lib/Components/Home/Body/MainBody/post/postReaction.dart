@@ -1,12 +1,10 @@
+import 'package:fblite/Components/Home/Body/MainBody/post_comment/comment.dart';
 import 'package:fblite/Controllers/BuildReactionContainer.dart';
+import 'package:fblite/Controllers/Navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Postreaction extends StatefulWidget {
-  _postreaction createState() => _postreaction();
-}
-
-class _postreaction extends State<Postreaction> {
+class Postreaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,6 +17,9 @@ class _postreaction extends State<Postreaction> {
         Buildreactioncontainer(
           icon: FontAwesomeIcons.message,
           ReactionCount: "35",
+          method: () {
+            Navigateto(context, Comment());
+          },
         ),
         Buildreactioncontainer(
           icon: FontAwesomeIcons.copy,

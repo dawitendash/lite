@@ -17,7 +17,13 @@ class _sell extends State<Sell> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Boldtext(text: "New listing", textSize: 16),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Boldtext(text: "New listing", textSize: 16),
+            TextButton(onPressed: () {}, child: NormalText("publish")),
+          ],
+        ),
         bottom: BottomBorderline(height: 2.0),
       ),
       body: SingleChildScrollView(
