@@ -1,5 +1,5 @@
-import 'package:fblite/Components/Bottom_Modal/custom_modal.dart';
 import 'package:fblite/Components/Menus/FullExpandSpace.dart';
+import 'package:fblite/Components/Modals/bottom_modal/custom_modal.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,18 +15,21 @@ class ProfileBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Fullexpandspaces(
+            optionalText: "",
             textValue: "Current city",
             icons: Icons.home,
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            optionalText: "",
             textValue: "Workplace",
             icons: Icons.work,
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            optionalText: "",
             method: () {
               CustomModal(context);
             },
@@ -36,18 +39,21 @@ class ProfileBody extends StatelessWidget {
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            optionalText: "",
             textValue: "Hometown",
             icons: Icons.location_on_outlined,
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            optionalText: "",
             textValue: "Relationship status",
             icons: FontAwesomeIcons.solidHeart,
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
           Fullexpandspaces(
+            optionalText: "",
             textValue: "see more about yourself",
             icons: Icons.more_horiz,
             colors: const Color.fromARGB(255, 174, 169, 169),

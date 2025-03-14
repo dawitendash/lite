@@ -1,4 +1,5 @@
 import 'package:fblite/Components/CreateStory/create_story.dart';
+import 'package:fblite/Components/Modals/alert_modal/alert.dart';
 import 'package:fblite/Controllers/BorderLine.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Views/profile.dart';
@@ -67,7 +68,16 @@ class _topSearchBarState extends State<Topseachbar> {
                 ),
               ),
 
-              FaIcon(FontAwesomeIcons.images, color: widget.iconColor),
+              IconButton(
+                onPressed: () {
+                  AlertModal(
+                    context,
+                    "Allow Facebook Lite to use your phone's storage?",
+                    "This lets you share from your camera roll, and enables other features for photos and videos",
+                  );
+                },
+                icon: FaIcon(FontAwesomeIcons.images, color: widget.iconColor),
+              ),
             ],
           ),
           SizedBox(height: 10),

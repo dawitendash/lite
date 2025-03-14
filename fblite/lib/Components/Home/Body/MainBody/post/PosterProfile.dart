@@ -1,3 +1,4 @@
+import 'package:fblite/Components/Modals/bottom_modal/three_dot_post.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Views/profile.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +105,15 @@ class _posterProfileState extends State<Posterprofile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.more_horiz, color: Color.fromARGB(255, 142, 143, 144)),
+              IconButton(
+                onPressed: () {
+                  DotsModal(context);
+                },
+                icon: Icon(
+                  Icons.more_horiz,
+                  color: Color.fromARGB(255, 142, 143, 144),
+                ),
+              ),
               Icon(widget.closeicon, color: Color.fromARGB(255, 142, 143, 144)),
             ],
           ),

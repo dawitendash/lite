@@ -17,10 +17,19 @@ void CustomModal(BuildContext context) {
         height: MediaQuery.sizeOf(context).height * 0.2,
         child: Column(
           children: [
-            Fullexpandspaces(icons: Icons.school, textValue: "College"),
+            Fullexpandspaces(
+              icons: Icons.school,
+              textValue: "College",
+              method: () {
+                print("college is clicked bro");
+              },
+            ),
             Fullexpandspaces(
               icons: Icons.location_city_rounded,
               textValue: "High school",
+              method: () {
+                print("High school is clicked bro");
+              },
             ),
           ],
         ),

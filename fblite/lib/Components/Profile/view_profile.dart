@@ -1,3 +1,5 @@
+import 'package:fblite/Components/Modals/bottom_modal/camera_modal.dart';
+import 'package:fblite/Components/Modals/bottom_modal/camera_on_profile_modal.dart';
 import 'package:fblite/Controllers/BoldText.dart';
 import 'package:fblite/Controllers/_buildIconButton.dart';
 import 'package:flutter/material.dart';
@@ -38,13 +40,23 @@ class ViewProfile extends StatelessWidget {
               ),
               child: Icon(Icons.person),
             ),
-            BuildIconButton(icon: FontAwesomeIcons.camera),
+            BuildIconButton(
+              icon: FontAwesomeIcons.camera,
+              method: () {
+                CameraonProfile(context);
+              },
+            ),
           ],
         ),
         Positioned(
           right: 10,
           top: 30,
-          child: BuildIconButton(icon: FontAwesomeIcons.camera),
+          child: BuildIconButton(
+            icon: FontAwesomeIcons.camera,
+            method: () {
+              CameraModal(context);
+            },
+          ),
         ),
         Positioned(bottom: 1, left: 2, child: Boldtext(text: "Dawit Endashaw")),
       ],

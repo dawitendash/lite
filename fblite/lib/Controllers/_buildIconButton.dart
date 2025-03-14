@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BuildIconButton extends StatefulWidget {
+class BuildIconButton extends StatelessWidget {
   IconData icon;
-  BuildIconButton({Key? key, required this.icon}) : super(key: key);
-  _buildIconButtonState createState() => _buildIconButtonState();
-}
-
-class _buildIconButtonState extends State<BuildIconButton> {
+  VoidCallback? method;
+  BuildIconButton({Key? key, required this.icon, this.method})
+    : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +14,12 @@ class _buildIconButtonState extends State<BuildIconButton> {
         color: Color(0xFFE4E6E8),
         shape: BoxShape.circle,
       ),
-      child: Icon(widget.icon, color: Colors.black, size: 22),
+      child: IconButton(
+        onPressed: () {
+          method!();
+        },
+        icon: Icon(icon, color: Colors.black, size: 22),
+      ),
     );
   }
 }

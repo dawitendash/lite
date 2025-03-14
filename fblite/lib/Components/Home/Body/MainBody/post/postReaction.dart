@@ -1,4 +1,6 @@
 import 'package:fblite/Components/Home/Body/MainBody/post_comment/comment.dart';
+import 'package:fblite/Components/Modals/bottom_modal/copy_modal.dart';
+import 'package:fblite/Components/Modals/bottom_modal/share_modal.dart';
 import 'package:fblite/Controllers/BuildReactionContainer.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +26,16 @@ class Postreaction extends StatelessWidget {
         Buildreactioncontainer(
           icon: FontAwesomeIcons.copy,
           ReactionCount: "322",
+          method: () {
+            CopyModal(context);
+          },
         ),
         Buildreactioncontainer(
           icon: FontAwesomeIcons.share,
           ReactionCount: "876",
+          method: () {
+            ShareModal(context);
+          },
         ),
       ],
     );

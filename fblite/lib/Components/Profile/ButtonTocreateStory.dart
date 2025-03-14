@@ -1,3 +1,4 @@
+import 'package:fblite/Components/Modals/bottom_modal/profile_dot.dart';
 import 'package:fblite/Controllers/Button.dart';
 import 'package:flutter/material.dart';
 
@@ -38,8 +39,10 @@ class Buttontocreatestory extends StatelessWidget {
               icon: Icons.more_horiz,
               backgroundColor: const Color(0xFFE4E6E8),
               foregroundColor: Colors.black,
-              textValue: "",
-              method: () {},
+              textValue: "...",
+              method: () {
+                ProfileDotModal(context);
+              },
             ),
           ),
         ],

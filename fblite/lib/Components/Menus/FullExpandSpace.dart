@@ -1,3 +1,4 @@
+import 'package:fblite/Controllers/NormalText.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -7,6 +8,7 @@ class Fullexpandspaces extends StatelessWidget {
   Color? colors = const Color.fromARGB(255, 146, 141, 141);
   Color? bg;
   VoidCallback? method;
+  String? optionalText;
   Fullexpandspaces({
     Key? key,
     this.icons,
@@ -14,6 +16,7 @@ class Fullexpandspaces extends StatelessWidget {
     this.textValue,
     this.method,
     this.bg,
+    this.optionalText,
   }) : super(key: key);
 
   @override
@@ -23,9 +26,11 @@ class Fullexpandspaces extends StatelessWidget {
         method!();
       },
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.only(top: 10, left: 6, right: 6, bottom: 6),
         color: bg,
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisSize: MainAxisSize.min,
           children: [
             FaIcon(icons, color: colors),
             SizedBox(width: 10),
@@ -37,6 +42,7 @@ class Fullexpandspaces extends StatelessWidget {
                     textValue!,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
+                  if (optionalText != null) ...[NormalText(optionalText!)],
                 ],
               ),
             ),

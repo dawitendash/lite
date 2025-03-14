@@ -1,3 +1,5 @@
+import 'package:fblite/Components/Modals/bottom_modal/camera_modal.dart';
+import 'package:fblite/Components/Modals/bottom_modal/camera_on_profile_modal.dart';
 import 'package:fblite/Components/Profile/ButtonTocreateStory.dart';
 import 'package:fblite/Components/Profile/profile_body.dart';
 import 'package:fblite/Components/Profile/upgrade_profile.dart';
@@ -63,13 +65,23 @@ class _ProfileState extends State<Profile> {
                       ),
                       child: Icon(Icons.person),
                     ),
-                    BuildIconButton(icon: FontAwesomeIcons.camera),
+                    BuildIconButton(
+                      icon: FontAwesomeIcons.camera,
+                      method: () {
+                        CameraonProfile(context);
+                      },
+                    ),
                   ],
                 ),
                 Positioned(
                   right: 10,
                   top: 30,
-                  child: BuildIconButton(icon: FontAwesomeIcons.camera),
+                  child: BuildIconButton(
+                    icon: FontAwesomeIcons.camera,
+                    method: () {
+                      CameraModal(context);
+                    },
+                  ),
                 ),
                 Positioned(
                   bottom: 1,

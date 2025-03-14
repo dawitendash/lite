@@ -4,14 +4,8 @@ import 'package:fblite/Components/Search/Popular_reels.dart';
 import 'package:fblite/Components/Search/SearchBar.dart';
 import 'package:flutter/material.dart';
 
-class SearchScreen extends StatefulWidget {
+class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
-
-  @override
-  State<SearchScreen> createState() => _SearchScreenState();
-}
-
-class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

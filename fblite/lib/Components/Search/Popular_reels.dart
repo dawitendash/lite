@@ -25,7 +25,7 @@ class _PopularReelsState extends State<PopularReels> {
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: SizedBox(
-                    width: 250, // Fixed width for each reel card
+                    width: 250,
                     child: Card(
                       elevation: 2,
                       shape: RoundedRectangleBorder(

@@ -1,7 +1,8 @@
+import 'package:fblite/Components/Modals/alert_modal/alert.dart';
+import 'package:fblite/Components/Search/Search.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Controllers/_buildIconButton.dart';
 import 'package:fblite/Views/Menu.dart';
-import 'package:fblite/Views/Search_screen.dart';
 import 'package:flutter/material.dart';
 
 class FirstRow extends StatefulWidget {
@@ -17,20 +18,29 @@ class _firstRowState extends State<FirstRow> {
         Image.asset('assets/images/fk.png', width: 80, height: 70),
         Row(
           children: [
-            BuildIconButton(icon: Icons.add),
-            SizedBox(width: 10),
-            GestureDetector(
-              onTap: () {
-                Navigateto(context, SearchScreen());
+            BuildIconButton(
+              icon: Icons.add,
+              method: () {
+                AlertModal(
+                  context,
+                  "Allow Facebook Lite to use your phone's storage?",
+                  "This lets you share from your camera roll, and enables other features for photos and videos",
+                );
               },
-              child: BuildIconButton(icon: Icons.search),
             ),
+            SizedBox(width: 10),
+            Search(),
             SizedBox(width: 10),
             GestureDetector(
               onTap: () {
                 Navigateto(context, Menus_screen());
               },
-              child: BuildIconButton(icon: Icons.menu),
+              child: BuildIconButton(
+                icon: Icons.menu,
+                method: () {
+                  Navigateto(context, Menus_screen());
+                },
+              ),
             ),
           ],
         ),
