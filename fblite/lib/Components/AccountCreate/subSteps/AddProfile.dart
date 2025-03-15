@@ -37,6 +37,7 @@ class _addProfileState extends State<Addprofile> {
             Boldtext(text: "Add a profile picture"),
             NormalText(
               "Help people find and recognize you by adding a profile picture ",
+              16,
             ),
             Align(
               alignment: Alignment.center,

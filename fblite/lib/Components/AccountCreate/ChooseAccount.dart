@@ -44,7 +44,7 @@ class _chooseAccountState extends State<ChooseAccount> {
                         'Dawit Endashaw',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      NormalText('dawitendashaw74@gmail.com'),
+                      NormalText('dawitendashaw74@gmail.com', 16),
                     ],
                   ),
                   Text('>'),

@@ -26,6 +26,7 @@ class _SaveLoginInfoState extends State<SaveLoginInfo> {
             SizedBox(height: 10),
             NormalText(
               "We'll save the login info for name ,so you won't need to enter it next time you log in. ",
+              16,
             ),
             SizedBox(height: 10),
             Button(

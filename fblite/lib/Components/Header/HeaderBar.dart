@@ -9,6 +9,6 @@ class HeaderBar extends StatefulWidget {
 class _headerBar extends State<HeaderBar> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [FirstRow(), SizedBox(height: 10), SecondRow()]);
+    return Column(children: [FirstRow(), SizedBox(height: 15), SecondRow()]);
   }
 }

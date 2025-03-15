@@ -28,6 +28,7 @@ class _accountExitState extends State<AccountExist> {
             SizedBox(height: 10),
             NormalText(
               'if this is you, we can help you log in. if not,you can find another account.',
+              16,
             ),
             SizedBox(height: 20),
             GestureDetector(
@@ -55,7 +56,7 @@ class _accountExitState extends State<AccountExist> {
                         'Dawit Endashaw',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      NormalText('dawitendashaw74@gmail.com'),
+                      NormalText('dawitendashaw74@gmail.com', 16),
                     ],
                   ),
                   Text('>'),

@@ -7,37 +7,44 @@ class HorizontalLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SizedBox(
-          width: 120,
-          child: Fullexpandspaces(
-            textValue: "Photo",
-            icons: Icons.photo_library_sharp,
-            colors: Colors.green,
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(
+            width: screenWidth / 3.5,
+            child: Fullexpandspaces(
+              textValue: "Photo",
+              icons: Icons.photo_library_sharp,
+              colors: Colors.green,
+            ),
           ),
-        ),
-        VerticalBorder(width: 2.0),
-        SizedBox(
-          width: 120,
-          child: Fullexpandspaces(
-            textValue: "Check in",
-            icons: Icons.location_on,
-            colors: Colors.red,
+          VerticalBorder(width: 2.0),
+
+          // Second link: Check-in
+          SizedBox(
+            width: screenWidth / 3.5,
+            child: Fullexpandspaces(
+              textValue: "Check in",
+              icons: Icons.location_on,
+              colors: Colors.red,
+            ),
           ),
-        ),
-        VerticalBorder(width: 2.0),
-        SizedBox(
-          width: 120,
-          child: Fullexpandspaces(
-            textValue: "Life Event",
-            icons: Icons.flag,
-            colors: const Color.fromARGB(255, 76, 102, 175),
+          VerticalBorder(width: 2.0),
+          SizedBox(
+            width: screenWidth / 3.5,
+            child: Fullexpandspaces(
+              textValue: "Life Event",
+              icons: Icons.flag,
+              colors: const Color.fromARGB(255, 76, 102, 175),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

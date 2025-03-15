@@ -20,6 +20,7 @@ class _confirmTheAccountState extends State<ConfirmAccountWithEmail> {
             Boldtext(text: "Confirm your account"),
             NormalText(
               "We sent a code to your email. Enter that code to confirm your account.",
+              16,
             ),
             SizedBox(height: 10),
             ClipRRect(

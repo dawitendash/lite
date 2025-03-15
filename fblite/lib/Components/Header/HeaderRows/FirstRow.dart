@@ -6,6 +6,7 @@ import 'package:fblite/Views/Menu.dart';
 import 'package:flutter/material.dart';
 
 class FirstRow extends StatefulWidget {
+  @override
   _firstRowState createState() => _firstRowState();
 }
 
@@ -15,7 +16,11 @@ class _firstRowState extends State<FirstRow> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Image.asset('assets/images/fk.png', width: 80, height: 70),
+        // Image.asset('assets/images/fk.png', width: 80, height: 70),
+        Text(
+          "Facebook",
+          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        ),
         Row(
           children: [
             BuildIconButton(
@@ -31,16 +36,11 @@ class _firstRowState extends State<FirstRow> {
             SizedBox(width: 10),
             Search(),
             SizedBox(width: 10),
-            GestureDetector(
-              onTap: () {
+            BuildIconButton(
+              icon: Icons.menu,
+              method: () {
                 Navigateto(context, Menus_screen());
               },
-              child: BuildIconButton(
-                icon: Icons.menu,
-                method: () {
-                  Navigateto(context, Menus_screen());
-                },
-              ),
             ),
           ],
         ),

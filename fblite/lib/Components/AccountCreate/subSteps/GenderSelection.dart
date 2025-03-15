@@ -28,6 +28,7 @@ class _GenderSelectionState extends State<GenderSelection> {
             SizedBox(height: 10),
             NormalText(
               'You can change who sees your gender on your profile later.',
+              16,
             ),
             SizedBox(height: 10),
             Column(
@@ -58,6 +59,7 @@ class _GenderSelectionState extends State<GenderSelection> {
               margin: EdgeInsets.only(left: 5, right: 10),
               child: NormalText(
                 "Select More options to choose another gender or if you'd rather not say",
+                16,
               ),
             ),
             SizedBox(height: 20),

@@ -24,6 +24,7 @@ class _useDifferentAccountState extends State<UseDifferentAccount> {
             SizedBox(height: 10),
             NormalText(
               "If you have an account we can help you find it and log in.if you don't ,you can create a new account.",
+              16,
             ),
             SizedBox(height: 20),
             Button(

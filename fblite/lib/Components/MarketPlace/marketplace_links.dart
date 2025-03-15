@@ -1,5 +1,6 @@
 import 'package:fblite/Components/MarketPlace/inbox/inbox.dart';
 import 'package:fblite/Components/MarketPlace/sell/sell.dart';
+import 'package:fblite/Components/Modals/catagory_modal.dart';
 import 'package:fblite/Controllers/BuilLinksCotainer.dart';
 import 'package:fblite/Controllers/Navigation.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class MarketplaceLinks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Buillinkscotainer(icons: Icons.person),
+        Buillinkscotainer(icons: Icons.person, textValue: ''),
         SizedBox(width: 3),
         Buillinkscotainer(
           textValue: "Inbox",
@@ -27,7 +28,12 @@ class MarketplaceLinks extends StatelessWidget {
           },
         ),
         SizedBox(width: 3),
-        Buillinkscotainer(textValue: "Catagories"),
+        Buillinkscotainer(
+          textValue: "Catagories",
+          method: () {
+            CatagoryModal(context);
+          },
+        ),
         SizedBox(width: 3),
         Buillinkscotainer(textValue: "Search"),
       ],

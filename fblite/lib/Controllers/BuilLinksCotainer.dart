@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
 class Buillinkscotainer extends StatefulWidget {
-  double? textSize;
-  String? textValue;
-  IconData? icons;
-  VoidCallback? method;
+  final double textSize;
+  final String textValue;
+  final IconData? icons;
+  final VoidCallback? method;
+  final double iconSize;
 
-  Buillinkscotainer({
-    this.icons,
-    this.textValue,
-    this.method,
-    this.textSize,
+  const Buillinkscotainer({
     Key? key,
+    this.iconSize = 16.0,
+    this.icons,
+    required this.textValue,
+    this.method,
+    this.textSize = 14.0,
   }) : super(key: key);
 
   @override
-  State<Buillinkscotainer> createState() => _BuillinkscotainerState();
+  _BuildLinksContainerState createState() => _BuildLinksContainerState();
 }
 
-class _BuillinkscotainerState extends State<Buillinkscotainer> {
+class _BuildLinksContainerState extends State<Buillinkscotainer> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        widget.method!();
-      },
+      onTap: widget.method,
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
         decoration: BoxDecoration(
@@ -34,23 +34,19 @@ class _BuillinkscotainerState extends State<Buillinkscotainer> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (widget.icons != null) ...[Icon(widget.icons)],
-            if (widget.textValue != null)
-              Text(
-                widget.textValue!,
-                style: TextStyle(
-                  fontSize: widget.textSize,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+            if (widget.icons != null) Icon(widget.icons, size: widget.iconSize),
+            if (widget.icons != null && widget.textValue.isNotEmpty)
+              SizedBox(width: 5),
+            Text(
+              widget.textValue,
+              style: TextStyle(
+                fontSize: widget.textSize,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
               ),
-            if (widget.icons == Icons.groups && widget.icons != null) ...[
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.arrow_drop_down),
-                // icon: FaIcon(FontAwesomeIcons.angleDown, size: 10),
-              ),
-            ],
+            ),
+            if (widget.icons == Icons.groups)
+              Icon(Icons.arrow_drop_down, size: widget.iconSize),
           ],
         ),
       ),

@@ -28,6 +28,7 @@ class _ImportContactState extends State<ImportContacts> {
             Boldtext(text: "Facebook is better with friends"),
             NormalText(
               "See who's on Facebook by continuously uploading your contacts. Then let us know who you want to add as friends.",
+              16,
             ),
             SizedBox(height: 20),
             Center(
@@ -51,6 +52,7 @@ class _ImportContactState extends State<ImportContacts> {
             children: [
               NormalText(
                 "Info about contacts in your address book, including names, phone numbers, and nicknames, will be sent to Facebook so we can suggest friends for you and others, and offer a better service. You can turn this off in settings and manage or delete contact information you share with Facebook. Learn more.",
+                16,
               ),
               SizedBox(height: 10),
               Button(

@@ -1,26 +1,34 @@
 import 'package:flutter/material.dart';
 
-class headerBar extends StatelessWidget {
-  MainAxisAlignment style = MainAxisAlignment.center;
-  String displayText;
-  headerBar(this.displayText, this.style, {super.key});
+class HeaderBar extends StatelessWidget {
+  final MainAxisAlignment style;
+  final String displayText;
+
+  const HeaderBar({
+    Key? key,
+    required this.displayText,
+    this.style = MainAxisAlignment.center,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: style,
-      children: [
-        Text(
-          displayText,
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 15,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: Row(
+        mainAxisAlignment: style,
+        children: [
+          Text(
+            displayText,
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),
           ),
-        ),
-        SizedBox(width: 5),
-        Icon(Icons.language, color: Colors.black),
-      ],
+          SizedBox(width: 5),
+          Icon(Icons.language, color: Colors.black),
+        ],
+      ),
     );
   }
 }

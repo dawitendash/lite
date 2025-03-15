@@ -28,6 +28,7 @@ class _ForgetpasswordState extends State<Forgetpassword> {
               _IsFindByEamil
                   ? 'Enter your email address.'
                   : 'Enter your mobile number.',
+              16,
             ),
             SizedBox(height: 20),
             TextField(

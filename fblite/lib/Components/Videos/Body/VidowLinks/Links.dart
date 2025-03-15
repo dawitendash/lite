@@ -1,26 +1,53 @@
 import 'package:fblite/Controllers/BuilLinksCotainer.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Links extends StatefulWidget {
-  _videoState createState() => _videoState();
+  @override
+  State<Links> createState() => _LinksState();
 }
 
-class _videoState extends State<Links> {
+class _LinksState extends State<Links> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Buillinkscotainer(icons: Icons.tv, textValue: "For you"),
-        Buillinkscotainer(icons: FontAwesomeIcons.film, textValue: "Reels"),
-        Buillinkscotainer(icons: FontAwesomeIcons.video, textValue: "Live"),
-        Buillinkscotainer(
-          icons: FontAwesomeIcons.userFriends,
-          textValue: "Following",
-        ),
-        Buillinkscotainer(icons: FontAwesomeIcons.bookmark, textValue: "Saved"),
-      ],
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      child: Wrap(
+        spacing: 10,
+        runSpacing: 10,
+        alignment: WrapAlignment.center,
+        children: [
+          Buillinkscotainer(
+            iconSize: 10,
+            textSize: 10,
+            icons: Icons.tv,
+            textValue: "For you",
+          ),
+          Buillinkscotainer(
+            iconSize: 10,
+            textSize: 10,
+            icons: Icons.movie,
+            textValue: "Reels",
+          ),
+          Buillinkscotainer(
+            textSize: 10,
+            iconSize: 10,
+            icons: Icons.video_library_outlined,
+            textValue: "Live",
+          ),
+          Buillinkscotainer(
+            iconSize: 10,
+            textSize: 10,
+            icons: Icons.groups,
+            textValue: "Following",
+          ),
+          Buillinkscotainer(
+            iconSize: 10,
+            textSize: 10,
+            icons: Icons.bookmark,
+            textValue: "Saved",
+          ),
+        ],
+      ),
     );
   }
 }

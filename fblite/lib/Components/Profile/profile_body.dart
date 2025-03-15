@@ -10,10 +10,15 @@ class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 20,
+      ), // Adjusted padding for better spacing
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment:
+            CrossAxisAlignment.start, // Align content to the start
         children: [
+          // Current city section
           Fullexpandspaces(
             optionalText: "",
             textValue: "Current city",
@@ -21,6 +26,7 @@ class ProfileBody extends StatelessWidget {
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
+          // Workplace section
           Fullexpandspaces(
             optionalText: "",
             textValue: "Workplace",
@@ -28,16 +34,18 @@ class ProfileBody extends StatelessWidget {
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
+          // School section with modal functionality
           Fullexpandspaces(
             optionalText: "",
             method: () {
-              CustomModal(context);
+              CustomModal(context); // Open modal when clicked
             },
             textValue: "School",
             icons: Icons.school,
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
+          // Hometown section
           Fullexpandspaces(
             optionalText: "",
             textValue: "Hometown",
@@ -45,6 +53,7 @@ class ProfileBody extends StatelessWidget {
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
+          // Relationship status section
           Fullexpandspaces(
             optionalText: "",
             textValue: "Relationship status",
@@ -52,14 +61,17 @@ class ProfileBody extends StatelessWidget {
             bg: Colors.white,
             colors: const Color.fromARGB(255, 174, 169, 169),
           ),
+          // "See more about yourself" section
           Fullexpandspaces(
             optionalText: "",
-            textValue: "see more about yourself",
+            textValue: "See more about yourself",
             icons: Icons.more_horiz,
             colors: const Color.fromARGB(255, 174, 169, 169),
             bg: Colors.white,
           ),
+          // Bottom Border Line for separation
           BottomBorderline(height: 0.5),
+          // Row for Friends and Find Friends section
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -70,9 +82,16 @@ class ProfileBody extends StatelessWidget {
                   colors: const Color.fromARGB(255, 174, 169, 169),
                 ),
               ),
-              Text("Find Friends", style: TextStyle(color: Colors.blue)),
+              Text(
+                "Find Friends",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ), // Added bold text style
+              ),
             ],
           ),
+          // Bottom Border Line to end the section
           BottomBorderline(),
         ],
       ),

@@ -9,7 +9,7 @@ void AlertModal(BuildContext context, String alertTitle, String alertContent) {
       return AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         title: Boldtext(text: alertTitle, textSize: 16),
-        content: NormalText(alertContent),
+        content: NormalText(alertContent, 16),
         actions: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

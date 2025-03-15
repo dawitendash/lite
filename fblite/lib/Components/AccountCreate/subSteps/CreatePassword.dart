@@ -28,6 +28,7 @@ class _CreatePasswordState extends State<CreatePassword> {
             SizedBox(height: 10),
             NormalText(
               "Create a password with at least 6 characters or numbers. It should be something others can't guess",
+              16,
             ),
             SizedBox(height: 20),
             TextField(

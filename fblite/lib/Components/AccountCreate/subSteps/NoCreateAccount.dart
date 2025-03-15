@@ -23,6 +23,7 @@ class _NoCreateAccountState extends State<NoCreateAccount> {
           children: [
             NormalText(
               "Let us know this email address belongs to you. Enter the code sent to dawitEndashaw74@gmail.com.",
+              16,
             ),
             const SizedBox(height: 10),
             Boldtext(text: "Enter the 5-digit code from your email."),
@@ -62,7 +63,7 @@ class _NoCreateAccountState extends State<NoCreateAccount> {
               foregroundColor: Colors.white,
             ),
             const SizedBox(height: 10),
-            NormalText("You should receive your email in 3 minutes."),
+            NormalText("You should receive your email in 3 minutes.", 16),
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () {

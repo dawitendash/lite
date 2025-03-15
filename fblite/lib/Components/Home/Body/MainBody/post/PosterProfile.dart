@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Posterprofile extends StatefulWidget {
-  String? follow = '';
+  String? follow;
   IconData? verifyicon;
   IconData? glopeicon;
   IconData? closeicon;
-  String? sugesstedtext = '';
+  String? sugesstedtext;
 
   Posterprofile({
     Key? key,
@@ -19,24 +19,31 @@ class Posterprofile extends StatefulWidget {
     this.verifyicon,
     this.sugesstedtext,
   }) : super(key: key);
+
+  @override
   _posterProfileState createState() => _posterProfileState();
 }
 
 class _posterProfileState extends State<Posterprofile> {
+  TextStyle _subTextStyle = TextStyle(
+    color: Color.fromARGB(255, 142, 143, 144),
+    fontSize: 12,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10),
       child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigateto(context, Profile());
-                },
-                child: Stack(
+          // Profile and name row
+          GestureDetector(
+            onTap: () {
+              Navigateto(context, Profile());
+            },
+            child: Row(
+              children: [
+                Stack(
                   alignment: Alignment.bottomRight,
                   children: [
                     CircleAvatar(
@@ -44,66 +51,59 @@ class _posterProfileState extends State<Posterprofile> {
                       backgroundColor: Color(0xFFE4E6E8),
                       child: Icon(Icons.person),
                     ),
-                    Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        shape: BoxShape.circle,
+                    Positioned(
+                      right: 0,
+                      bottom: 0,
+                      child: Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          shape: BoxShape.circle,
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
-              SizedBox(width: 5),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        'Dawit Endashaw',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Icon(widget.verifyicon, color: Colors.blue),
-                      SizedBox(width: 5),
-                      Text(
-                        widget.follow!,
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        widget.sugesstedtext!,
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 142, 143, 144),
-                          fontSize: 12,
+                SizedBox(width: 5),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Dawit Endashaw',
+                          style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                      ),
-                      Text(
-                        "Feb 27 .",
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 142, 143, 144),
-                          fontSize: 12,
+                        SizedBox(width: 5),
+                        if (widget.verifyicon != null)
+                          Icon(widget.verifyicon, color: Colors.blue),
+                        SizedBox(width: 5),
+                        Text(
+                          widget.follow ?? '',
+                          style: TextStyle(color: Colors.blue),
                         ),
-                      ),
-                      FaIcon(
-                        widget.glopeicon,
-                        color: Color.fromARGB(255, 142, 143, 144),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(widget.sugesstedtext ?? '', style: _subTextStyle),
+                        Text("Feb 27 .", style: _subTextStyle),
+                        if (widget.glopeicon != null)
+                          FaIcon(
+                            widget.glopeicon,
+                            color: Color.fromARGB(255, 142, 143, 144),
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
           Spacer(),
+          // Icons (dots and close)
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
                 onPressed: () {
@@ -114,7 +114,10 @@ class _posterProfileState extends State<Posterprofile> {
                   color: Color.fromARGB(255, 142, 143, 144),
                 ),
               ),
-              Icon(widget.closeicon, color: Color.fromARGB(255, 142, 143, 144)),
+              Icon(
+                widget.closeicon ?? Icons.close,
+                color: Color.fromARGB(255, 142, 143, 144),
+              ),
             ],
           ),
         ],

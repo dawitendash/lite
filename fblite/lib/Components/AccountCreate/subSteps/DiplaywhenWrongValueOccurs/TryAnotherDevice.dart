@@ -23,6 +23,7 @@ class _TryAnotherDeviceState extends State<TryAnotherDevice> {
             const SizedBox(height: 10),
             NormalText(
               "This must be a device you've used to log into this account before",
+              16,
             ),
             const SizedBox(height: 10),
             ClipRRect(
@@ -39,6 +40,7 @@ class _TryAnotherDeviceState extends State<TryAnotherDevice> {
             SizedBox(height: 10),
             NormalText(
               "We can't match the device you're using to the account you're trying to recover,so it's not safe to go further.",
+              16,
             ),
           ],
         ),

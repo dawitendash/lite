@@ -1,6 +1,8 @@
 import 'package:fblite/Controllers/BoldText.dart';
+import 'package:fblite/Controllers/Navigation.dart';
 import 'package:fblite/Controllers/NormalText.dart';
 import 'package:fblite/Controllers/_buildIconButton.dart';
+import 'package:fblite/Views/profile.dart';
 import 'package:flutter/material.dart';
 
 class ViewProfile extends StatelessWidget {
@@ -15,14 +17,19 @@ class ViewProfile extends StatelessWidget {
         children: [
           BuildIconButton(icon: Icons.person),
           SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Boldtext(text: "Dawit Endashaw"),
-                SizedBox(height: 4),
-                NormalText("View profile"),
-              ],
+          GestureDetector(
+            onTap: () {
+              Navigateto(context, Profile());
+            },
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Boldtext(text: "Dawit Endashaw"),
+                  SizedBox(height: 4),
+                  NormalText("View profile", 16),
+                ],
+              ),
             ),
           ),
         ],

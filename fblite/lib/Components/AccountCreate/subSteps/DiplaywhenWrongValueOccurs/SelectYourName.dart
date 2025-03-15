@@ -34,6 +34,7 @@ class _SelectYourNameState extends State<SelectYourName> {
             SizedBox(height: 20),
             NormalText(
               'You typed first last name .We require everyone to use the name they use in evertday life ,what thier friends call them, on facebook,Did you mean:',
+              16,
             ),
             SizedBox(height: 20),
             Radio(

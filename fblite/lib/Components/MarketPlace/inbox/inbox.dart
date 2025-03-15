@@ -14,11 +14,13 @@ class Inbox extends StatelessWidget {
         title: Boldtext(text: "Inbox", textSize: 16),
         bottom: BottomBorderline(),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.only(top: 10),
-        child: Column(
-          children: [
-            Row(
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Buillinkscotainer(textValue: "All", textSize: 9),
@@ -28,21 +30,21 @@ class Inbox extends StatelessWidget {
                 Buillinkscotainer(textValue: "Cash on delivery", textSize: 9),
               ],
             ),
-            SizedBox(height: 20),
-            Center(
-              child: Column(
-                children: [
-                  Icon(
-                    Icons.messenger_outline,
-                    size: 100,
-                    color: const Color.fromARGB(255, 174, 169, 169),
-                  ),
-                  NormalText("No Chat"),
-                ],
-              ),
+          ),
+          SizedBox(height: 20),
+          Center(
+            child: Column(
+              children: [
+                Icon(
+                  Icons.messenger_outline,
+                  size: 100,
+                  color: const Color.fromARGB(255, 174, 169, 169),
+                ),
+                NormalText("No Chat", 16),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

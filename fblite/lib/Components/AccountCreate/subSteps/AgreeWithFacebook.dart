@@ -25,6 +25,7 @@ class _AgreeWithFacebookState extends State<AgreeWithFacebook> {
               padding: EdgeInsets.only(right: 5),
               child: NormalText(
                 "People who use our service may have uploading your contact information to Facebook. learn more ",
+                16,
               ),
             ),
             SizedBox(height: 20),
@@ -32,6 +33,7 @@ class _AgreeWithFacebookState extends State<AgreeWithFacebook> {
               padding: EdgeInsets.only(right: 5),
               child: NormalText(
                 "By tapping I agree, you agree to create an account and to Facebook's Terms,Privacy Policy and Cookies Policy. ",
+                16,
               ),
             ),
             SizedBox(height: 20),
@@ -39,6 +41,7 @@ class _AgreeWithFacebookState extends State<AgreeWithFacebook> {
               padding: EdgeInsets.only(right: 5),
               child: NormalText(
                 " The Privacy Policy dexcribes the ways we can use the information we collect when you create an account.For example, we use this information to provide,personalize and improve our products,including ads.  ",
+                16,
               ),
             ),
             SizedBox(height: 20),

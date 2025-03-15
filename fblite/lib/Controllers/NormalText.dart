@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class NormalText extends StatefulWidget {
+class NormalText extends StatelessWidget {
   String? text = "";
-  NormalText(this.text);
-  _normalTextState createState() => _normalTextState();
-}
-
-class _normalTextState extends State<NormalText> {
+  double? textSize;
+  NormalText(this.text, this.textSize);
   @override
   Widget build(BuildContext context) {
     return Text(
-      widget.text!,
-      style: (TextStyle(color: const Color.fromARGB(255, 129, 127, 127))),
+      text!,
+      style: (TextStyle(
+        color: const Color.fromARGB(255, 129, 127, 127),
+        fontSize: textSize,
+      )),
     );
   }
 }

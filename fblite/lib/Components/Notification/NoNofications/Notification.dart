@@ -8,20 +8,27 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Notifications extends StatefulWidget {
-  _notificationState createState() => _notificationState();
+  @override
+  _NotificationState createState() => _NotificationState();
 }
 
-class _notificationState extends State<Notifications> {
+class _NotificationState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: SecondRow(),
-        bottom: BottomBorderline(),
+        title: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: SecondRow(),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: BottomBorderline(),
+        ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -30,42 +37,55 @@ class _notificationState extends State<Notifications> {
               children: [
                 Boldtext(text: "Notifications"),
                 Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     BuildIconButton(icon: Icons.check),
-                    SizedBox(width: 5),
+                    SizedBox(width: 8),
                     Search(),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
+
+            /// Notification Item
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
-                  alignment: Alignment.bottomRight,
+                  clipBehavior: Clip.none,
                   children: [
                     Icon(Icons.facebook, size: 40, color: Colors.blue),
-                    FaIcon(
-                      FontAwesomeIcons.bell,
-                      size: 10,
-                      color: Colors.black,
+                    Positioned(
+                      top: 0,
+                      right: -2,
+                      child: FaIcon(
+                        FontAwesomeIcons.bell,
+                        size: 14,
+                        color: Colors.black,
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(width: 10),
+                SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      NormalText(
+                      Text(
                         'Welcome to Facebook! Tap here to find people you know and add them as a friend.',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                      NormalText('Mar 7 at 8:33Pm.'),
+                      SizedBox(height: 4),
+                      NormalText('Mar 7 at 8:33 PM', 16),
                     ],
                   ),
                 ),
-                Icon(Icons.more_horiz),
+                SizedBox(width: 8),
+                Icon(Icons.more_horiz, color: Colors.grey[700]),
               ],
             ),
           ],

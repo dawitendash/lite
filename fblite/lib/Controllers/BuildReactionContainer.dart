@@ -5,12 +5,17 @@ class Buildreactioncontainer extends StatefulWidget {
   IconData icon;
   String ReactionCount;
   VoidCallback? method;
+  TextStyle? reactionTextStyle; // Added the optional text style parameter
+
   Buildreactioncontainer({
     Key? key,
     required this.icon,
     required this.ReactionCount,
     this.method,
+    this.reactionTextStyle, // Accept the text style
   }) : super(key: key);
+
+  @override
   _buildReactionContainer createState() => _buildReactionContainer();
 }
 
@@ -19,10 +24,10 @@ class _buildReactionContainer extends State<Buildreactioncontainer> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        widget.method!();
+        if (widget.method != null) widget.method!();
       },
       child: Container(
-        margin: EdgeInsets.all(5),
+        margin: EdgeInsets.all(2),
         height: 40,
         width: 80,
         decoration: BoxDecoration(
@@ -34,9 +39,12 @@ class _buildReactionContainer extends State<Buildreactioncontainer> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FaIcon(widget.icon, size: 18),
-              SizedBox(width: 5),
-              Text(widget.ReactionCount, style: TextStyle(fontSize: 14)),
+              FaIcon(widget.icon, size: 14),
+              SizedBox(width: 2),
+              Text(
+                widget.ReactionCount,
+                style: widget.reactionTextStyle ?? TextStyle(fontSize: 12),
+              ),
             ],
           ),
         ),

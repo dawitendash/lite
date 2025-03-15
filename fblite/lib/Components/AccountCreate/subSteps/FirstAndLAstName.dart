@@ -24,7 +24,7 @@ class _FirsAndLastName extends State<FirstAndLAstName> {
           children: [
             Boldtext(text: "what's your name?"),
             SizedBox(height: 20),
-            NormalText('Enter the name you use in real life'),
+            NormalText('Enter the name you use in real life', 16),
             SizedBox(height: 20),
             Row(
               children: [

@@ -27,7 +27,7 @@ class _confirmTheAccountState extends State<Confirmaccountwithpassword> {
                     height: 50,
                   ),
                 ),
-                NormalText("Dawit Endashaw"),
+                NormalText("Dawit Endashaw", 16),
               ],
             ),
             SizedBox(height: 10),

@@ -9,33 +9,41 @@ class UpgradeProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ), // Added symmetric padding for consistency
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Boldtext(text: "Add more to your profile"),
-              Icon(Icons.close),
+              IconButton(
+                icon: Icon(Icons.close, color: Colors.black),
+                onPressed: () {}, // Close action goes here
+              ),
             ],
           ),
           NormalText(
-            "Continue setting up your profile to get a better experiance on Facebook",
+            "Continue setting up your profile to get a better experience on Facebook.",
+            16,
           ),
           SizedBox(height: 10),
           Text(
             "Next: update your profile picture",
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           Button(
             textValue: "Continue",
-            method: () {},
+            method: () {}, // Continue action goes here
             backgroundColor: const Color.fromARGB(255, 185, 214, 238),
-            foregroundColor: Colors.blue,
+            foregroundColor:
+                Colors.blue, // Rounded button edges for a modern look
           ),
         ],
       ),

@@ -17,30 +17,37 @@ class Comment extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Center(child: Boldtext(text: "Military comics post", textSize: 16)),
+            Center(child: Boldtext(text: "Military Comics Post", textSize: 16)),
             Search(),
           ],
         ),
+        elevation: 1,
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Posterprofile(follow: "", sugesstedtext: ""),
-            SizedBox(height: 5),
-            Posttitle(),
-            SizedBox(height: 5),
-            Postedcontent(),
-            SizedBox(height: 5),
-            Samplereactiondata(),
-            SizedBox(height: 5),
-            Postreaction(),
             SizedBox(height: 10),
-            CommentList(),
+            Posttitle(),
+            SizedBox(height: 10),
+            Postedcontent(),
+            SizedBox(height: 10),
+            Samplereactiondata(),
+            SizedBox(height: 10),
+            Postreaction(),
+            SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: CommentList(),
+            ),
           ],
         ),
       ),
-      bottomNavigationBar: WrtieComment(),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: WrtieComment(),
+      ),
     );
   }
 }

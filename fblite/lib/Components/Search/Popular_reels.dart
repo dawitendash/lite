@@ -14,7 +14,10 @@ class _PopularReelsState extends State<PopularReels> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Popular Reels"),
+        Text(
+          "Popular Reels",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+        ),
         SizedBox(height: 10),
         SizedBox(
           height: 250,
@@ -22,6 +25,7 @@ class _PopularReelsState extends State<PopularReels> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
+                // First Image
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: SizedBox(
@@ -43,6 +47,51 @@ class _PopularReelsState extends State<PopularReels> {
                     ),
                   ),
                 ),
+                // Second Image
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    width: 250,
+                    child: Card(
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "assets/images/friends.png", // Replace with another image
+                          height: double.infinity,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                // Third Image
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    width: 250,
+                    child: Card(
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "assets/images/friends.png", // Replace with another image
+                          height: double.infinity,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                // Add more items as needed
               ],
             ),
           ),

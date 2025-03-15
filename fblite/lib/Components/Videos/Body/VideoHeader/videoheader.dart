@@ -4,27 +4,29 @@ import 'package:fblite/Controllers/_buildIconButton.dart';
 import 'package:flutter/material.dart';
 
 class Videoheader extends StatefulWidget {
-  _videoState createState() => _videoState();
+  @override
+  State<Videoheader> createState() => _VideoState();
 }
 
-class _videoState extends State<Videoheader> {
+class _VideoState extends State<Videoheader> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Boldtext(text: 'Videos'),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            BuildIconButton(icon: Icons.person),
-            SizedBox(width: 5),
-            BuildIconButton(icon: Icons.download),
-            SizedBox(width: 5),
-            Search(),
-          ],
-        ),
-      ],
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Boldtext(text: 'Videos'),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              BuildIconButton(icon: Icons.person),
+              BuildIconButton(icon: Icons.download),
+              Search(),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

@@ -19,25 +19,37 @@ class _FriendsState extends State<Friends> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: SecondRow(),
-        bottom: BottomBorderline(),
+        titleSpacing: 0, // Removes extra padding
+        title: Padding(
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+          child: SecondRow(),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: BottomBorderline(),
+        ),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(
+          horizontal: 10.0,
+          vertical: 15.0,
+        ), // Better spacing
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start, // Aligns text to left
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Boldtext(text: 'Friends'), Search()],
+              children: [Expanded(child: Boldtext(text: 'Friends')), Search()],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Row(
               children: [
                 Buillinkscotainer(textValue: 'Friend requests'),
                 SizedBox(width: 5),
-                Buillinkscotainer(textValue: "your friends"),
+                Buillinkscotainer(textValue: "Your friends"),
               ],
             ),
-            SizedBox(height: 200),
+            SizedBox(height: 80), // Reduced excessive spacing
             Center(
               child: Column(
                 children: [
@@ -49,26 +61,33 @@ class _FriendsState extends State<Friends> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(height: 5),
-                  Icon(
-                    Icons.telegram,
-                    color: const Color.fromARGB(255, 210, 205, 205),
-                  ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 8),
+                  Icon(Icons.telegram, color: Colors.grey, size: 40),
+                  SizedBox(height: 8),
                   Text(
-                    'No Suggestion',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    'No Suggestions',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   SizedBox(height: 5),
-                  NormalText('Try searching for a friend'),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.blue),
-                    ),
-                    child: Text(
-                      'Search for a friend',
-                      style: TextStyle(color: Colors.white),
+                  NormalText('Try searching for a friend', 16),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 10,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: Text(
+                        'Search for a friend',
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
                     ),
                   ),
                 ],

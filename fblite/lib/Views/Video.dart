@@ -23,7 +23,7 @@ class _videoState extends State<Video> {
         bottom: BottomBorderline(),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,7 +33,7 @@ class _videoState extends State<Video> {
             SizedBox(height: 10),
             BottomBorderline(),
             SizedBox(height: 10),
-            Posterprofile(),
+            Posterprofile(follow: "", glopeicon: Icons.abc, sugesstedtext: ""),
             SizedBox(height: 10),
             Posttitle(),
             SizedBox(height: 5),

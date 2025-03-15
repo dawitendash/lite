@@ -39,7 +39,7 @@ class Buttontocreatestory extends StatelessWidget {
               icon: Icons.more_horiz,
               backgroundColor: const Color(0xFFE4E6E8),
               foregroundColor: Colors.black,
-              textValue: "...",
+              textValue: "",
               method: () {
                 ProfileDotModal(context);
               },

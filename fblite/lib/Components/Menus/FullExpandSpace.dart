@@ -9,6 +9,7 @@ class Fullexpandspaces extends StatelessWidget {
   Color? bg;
   VoidCallback? method;
   String? optionalText;
+
   Fullexpandspaces({
     Key? key,
     this.icons,
@@ -26,11 +27,11 @@ class Fullexpandspaces extends StatelessWidget {
         method!();
       },
       child: Container(
-        padding: EdgeInsets.only(top: 10, left: 6, right: 6, bottom: 6),
+        padding: EdgeInsets.only(top: 5, left: 6, right: 6, bottom: 3),
         color: bg,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,
           children: [
             FaIcon(icons, color: colors),
             SizedBox(width: 10),
@@ -40,9 +41,11 @@ class Fullexpandspaces extends StatelessWidget {
                 children: [
                   Text(
                     textValue!,
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                   ),
-                  if (optionalText != null) ...[NormalText(optionalText!)],
+                  if (optionalText != null) ...[NormalText(optionalText!, 10)],
                 ],
               ),
             ),

@@ -12,26 +12,36 @@ class UserPosts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double verticalSpacing = 10.0;
+
     return SingleChildScrollView(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: verticalSpacing,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Boldtext(text: "Posts", textSize: 20),
-          SizedBox(height: 10),
+          SizedBox(height: verticalSpacing),
           Topseachbar(
             hintValue: "Post a status update",
             iconColor: Colors.black,
           ),
-          SizedBox(height: 10),
+          SizedBox(height: verticalSpacing),
           HorizontalLinks(),
-          SizedBox(height: 10),
+          SizedBox(height: verticalSpacing),
           BottomBorderline(height: 5.0),
-          SizedBox(height: 10),
+          SizedBox(height: verticalSpacing),
+
+          // Poster Profile with suggested text and follow
           Posterprofile(glopeicon: Icons.groups, sugesstedtext: "", follow: ""),
-          SizedBox(height: 5),
+
+          SizedBox(height: verticalSpacing),
           BottomBorderline(),
-          SizedBox(height: 5),
+          SizedBox(height: verticalSpacing),
+
+          // User's Birthday Info (Centering content)
           Center(
             child: Column(
               children: [
@@ -42,20 +52,22 @@ class UserPosts extends StatelessWidget {
                     color: Colors.blue,
                     shape: BoxShape.circle,
                   ),
-                  child: Text(
+                  child: const Text(
                     '🧸',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
                 Boldtext(text: "Born on March 2003", textSize: 12),
-                NormalText("March 2003"),
+                NormalText("March 2003", 16),
               ],
             ),
           ),
-          SizedBox(height: 5),
-          SizedBox(height: 5),
+
+          SizedBox(height: verticalSpacing),
           BottomBorderline(),
+
+          // Post reactions section
           Postreaction(),
         ],
       ),

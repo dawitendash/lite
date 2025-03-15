@@ -26,8 +26,9 @@ class _BirthdayState extends State<BirthDay> {
             SizedBox(height: 20),
             NormalText(
               'Choose your date of birth, you can always make this private later.',
+              16,
             ),
-            NormalText('Why do i need to provide my my birthday? '),
+            NormalText('Why do i need to provide my my birthday? ', 16),
             SizedBox(height: 20),
             TextField(
               controller: _birthDayController,

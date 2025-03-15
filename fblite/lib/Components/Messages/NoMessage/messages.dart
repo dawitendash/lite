@@ -7,46 +7,54 @@ import 'package:fblite/Controllers/_buildIconButton.dart';
 import 'package:flutter/material.dart';
 
 class Messages extends StatefulWidget {
-  _messages createState() => _messages();
+  @override
+  _MessagesState createState() => _MessagesState();
 }
 
-class _messages extends State<Messages> {
+class _MessagesState extends State<Messages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: SecondRow(),
-        bottom: BottomBorderline(),
+        titleSpacing: 0,
+        title: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: SecondRow(),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: BottomBorderline(),
+        ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start, // Aligns text to left
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Boldtext(text: 'Messages'),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     BuildIconButton(icon: Icons.settings),
-                    SizedBox(width: 5),
+                    SizedBox(width: 8),
                     Search(),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 200),
+            SizedBox(height: 80), // Reduced spacing
             Center(
               child: Column(
                 children: [
-                  Icon(Icons.telegram, color: Color(0xFFE4E6E8)),
+                  Icon(Icons.telegram, color: Color(0xFFE4E6E8), size: 60),
+                  SizedBox(height: 10),
+                  NormalText('No messages yet', 16),
                   SizedBox(height: 5),
-                  NormalText('No meessages yet'),
-                  SizedBox(height: 5),
-                  NormalText('Tap + to start a conversation'),
+                  NormalText('Tap + to start a conversation', 16),
                 ],
               ),
             ),
@@ -54,9 +62,11 @@ class _messages extends State<Messages> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // Handle new message action
+        },
         backgroundColor: Colors.blue,
-        child: Icon(Icons.add, color: Colors.white),
+        child: Icon(Icons.add, color: Colors.white, size: 28),
       ),
     );
   }

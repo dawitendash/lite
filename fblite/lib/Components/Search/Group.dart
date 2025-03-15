@@ -15,7 +15,18 @@ class _GroupState extends State<Group> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Groups for you"),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Text(
+            "Groups for you",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        SizedBox(height: 10),
         Row(
           children: [
             SizedBox(
@@ -51,7 +62,7 @@ class _GroupState extends State<Group> {
                             ),
                           ),
                           SizedBox(height: 5),
-                          NormalText("447k members • 10+ posts a day"),
+                          NormalText("447k members • 10+ posts a day", 16),
                           SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,7 +87,6 @@ class _GroupState extends State<Group> {
                                   onPressed: () {},
                                   style: OutlinedButton.styleFrom(
                                     foregroundColor: Colors.black,
-                                    // side: BorderSide(color: Colors.grey),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5),
                                     ),
