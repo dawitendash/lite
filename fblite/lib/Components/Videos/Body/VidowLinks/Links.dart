@@ -10,43 +10,46 @@ class _LinksState extends State<Links> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-      child: Wrap(
-        spacing: 10,
-        runSpacing: 10,
-        alignment: WrapAlignment.center,
-        children: [
-          Buillinkscotainer(
-            iconSize: 10,
-            textSize: 10,
-            icons: Icons.tv,
-            textValue: "For you",
-          ),
-          Buillinkscotainer(
-            iconSize: 10,
-            textSize: 10,
-            icons: Icons.movie,
-            textValue: "Reels",
-          ),
-          Buillinkscotainer(
-            textSize: 10,
-            iconSize: 10,
-            icons: Icons.video_library_outlined,
-            textValue: "Live",
-          ),
-          Buillinkscotainer(
-            iconSize: 10,
-            textSize: 10,
-            icons: Icons.groups,
-            textValue: "Following",
-          ),
-          Buillinkscotainer(
-            iconSize: 10,
-            textSize: 10,
-            icons: Icons.bookmark,
-            textValue: "Saved",
-          ),
-        ],
+      padding: EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          alignment: WrapAlignment.center,
+          children: [
+            Buillinkscotainer(
+              iconSize: 10,
+              textSize: 10,
+              icons: Icons.tv,
+              textValue: "For you",
+            ),
+            Buillinkscotainer(
+              iconSize: 10,
+              textSize: 10,
+              icons: Icons.movie,
+              textValue: "Reels",
+            ),
+            Buillinkscotainer(
+              textSize: 10,
+              iconSize: 10,
+              icons: Icons.video_library_outlined,
+              textValue: "Live",
+            ),
+            Buillinkscotainer(
+              iconSize: 10,
+              textSize: 10,
+              icons: Icons.groups,
+              textValue: "Following",
+            ),
+            Buillinkscotainer(
+              iconSize: 10,
+              textSize: 10,
+              icons: Icons.bookmark,
+              textValue: "Saved",
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -15,7 +15,7 @@ class Loginpage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            const SizedBox(height: 130),
+            const SizedBox(height: 60),
             const Center(
               child: Icon(
                 Icons.facebook,
@@ -80,7 +80,7 @@ class Loginpage extends StatelessWidget {
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
-                const SizedBox(height: 170),
+                const SizedBox(height: 120),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(

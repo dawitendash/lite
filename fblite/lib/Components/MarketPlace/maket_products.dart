@@ -1,4 +1,6 @@
+import 'package:fblite/Components/MarketPlace/ProductDetail/product_detail.dart';
 import 'package:fblite/Controllers/BoldText.dart';
+import 'package:fblite/Controllers/Navigation.dart';
 import 'package:flutter/material.dart';
 
 class MarketProducts extends StatelessWidget {
@@ -34,24 +36,29 @@ class MarketProducts extends StatelessWidget {
           itemCount: 4,
           shrinkWrap: true,
           itemBuilder: (context, index) {
-            return Column(
-              children: [
-                Image.asset(
-                  "assets/images/test.jpg",
-                  height: 100,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
-                SizedBox(height: 10),
-                Boldtext(text: "ETB 12,000", textSize: 14),
-                Text(
-                  "this is the product detail bro haha",
-                  style: TextStyle(
-                    color: Colors.blueGrey,
-                    overflow: TextOverflow.ellipsis,
+            return GestureDetector(
+              onTap: () {
+                Navigateto(context, ProductDetail());
+              },
+              child: Column(
+                children: [
+                  Image.asset(
+                    "assets/images/test.jpg",
+                    height: 100,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
                   ),
-                ),
-              ],
+                  SizedBox(height: 10),
+                  Boldtext(text: "ETB 12,000", textSize: 14),
+                  Text(
+                    "this is the product detail bro haha",
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ],
+              ),
             );
           },
         ),
